@@ -1,2 +1,2 @@
 # Hello world
-This is first project for OTUS course.
+This is first tasks for OTUS course.
