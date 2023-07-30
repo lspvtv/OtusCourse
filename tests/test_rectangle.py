@@ -2,6 +2,7 @@ import pytest
 from src.Rectangle import Rectangle
 
 
+
 @pytest.mark.parametrize('side_a, side_b, perimetr, area',
                          [
                              (4, 5, 18, 20),
@@ -38,7 +39,7 @@ def test_rectangle_creation_error(side_a, side_b, perimetr, area):
                              (1 * 10 ** 32, 9 * 10 ** 32, 2 * 10 ** 33, 9 * 10 ** 64)
 
                          ])
-def test_get_area_error(side_a, side_b, perimetr, area):
+def test_get_rectangle_area_error(side_a, side_b, perimetr, area):
     r = Rectangle(side_a, side_b)
     with pytest.raises(ValueError):
         r.get_area() == area
@@ -48,7 +49,7 @@ def test_get_area_error(side_a, side_b, perimetr, area):
                          [
                              (1 * 10 ** 63, 9 * 10 ** 63, 10 ** 64, 9 * 10 ** 126)
                          ])
-def test_get_perimetr_error(side_a, side_b, perimetr, area):
+def test_get_rectangle_perimetr_error(side_a, side_b, perimetr, area):
     r = Rectangle(side_a, side_b)
     with pytest.raises(ValueError):
         r.get_perimetr() == perimetr
