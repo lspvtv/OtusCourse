@@ -5,7 +5,7 @@ from src.Square import Square
 @pytest.mark.parametrize('side_a, perimetr, area',
                          [
                              (5, 20, 25),
-                             (1 * 10 ** 31, 4 * 10 ** 31, 9 * 10 ** 62),
+                             (10 ** 31, 4 * 10 ** 31, 10 ** 63),
                              (0.1, 0.4, 0.01),
                              (1 / 6, 2 / 3, 1 / 36)
                          ])
@@ -30,7 +30,7 @@ def test_Square_creation_error(side_a, perimetr, area):
         Square(side_a)
 
 
-@pytest.mark.parametrize('side_a, area',
+@pytest.mark.parametrize('side_a, perimetr, area',
                          [
                              (1 * 10 ** 32, 4 * 10 ** 32, 1 * 10 ** 64)
 

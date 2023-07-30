@@ -5,7 +5,7 @@ from src.Rectangle import Rectangle
 
 @pytest.mark.parametrize('side_a, side_b, perimetr, area',
                          [
-                             (4, 5, 18, 20),
+                             (4, 6, 20, 24),
                              (1 * 10 ** 31, 9 * 10 ** 31, 2 * 10 ** 32, 9 * 10 ** 62),
                              (0.1, 0.3, 0.8, 0.03),
                              (1 / 6, 5 / 6, 2, 5 / 36)
