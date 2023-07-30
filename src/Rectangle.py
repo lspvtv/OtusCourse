@@ -1,11 +1,25 @@
 class Rectangle:
     def __init__(self, side_a, side_b):
+        if side_a == side_b:
+            raise ValueError("It is not a rectangle, it is square")
+        if type(side_a) == str or type(side_b) == str:
+            raise ValueError("TypeError")
+        if side_a <= 0 or side_b <= 0:
+            raise ValueError("Can not create rectangle")
+        if side_a > 10 ** 64 or side_b > 10 ** 64:
+            raise ValueError("It is too large, stack overflow")
         self.side_a = side_a
         self.side_b = side_b
         self.name = 'Rectangle'
 
     def get_area(self):
-        return self.side_a * self.side_b
+        area = self.side_a * self.side_b
+        if area >= 10 ** 64:
+            raise ValueError("It is too large, stack overflow")
+        return area
 
     def get_perimetr(self):
-        return 2 * (self.side_a + self.side_b)
+        perimetr = 2 * (self.side_a + self.side_b)
+        if perimetr >= 10 ** 64:
+            raise ValueError("It is too large, stack overflow")
+        return perimetr
