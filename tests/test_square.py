@@ -5,8 +5,8 @@ from src.Square import Square
 @pytest.mark.parametrize('side_a, perimetr, area',
                          [
                              (5, 20, 25),
-                             (10 ** 31, 4 * 10 ** 31, 10 ** 63),
-                             (0.1, 0.4, 0.01),
+                             (10 ** 31, 4 * 10 ** 31, 10 ** 62),
+                             (0.1, 0.4, 0.010000000000000002),
                              (1 / 6, 2 / 3, 1 / 36)
                          ])
 def test_correct_Square(side_a, perimetr, area):

@@ -1,7 +1,8 @@
 class Rectangle:
     def __init__(self, side_a, side_b):
         if side_a == side_b:
-            raise ValueError("It is not a Rectangle, it is Square")
+            import warnings
+            warnings.simplefilter("error")
         if type(side_a) == str or type(side_b) == str:
             raise ValueError("TypeError")
         if side_a <= 0 or side_b <= 0:
@@ -10,7 +11,7 @@ class Rectangle:
             raise ValueError("It is too large, stack overflow")
         self.side_a = side_a
         self.side_b = side_b
-        self.name = 'Square'
+        self.name = 'Rectangle'
 
     def get_area(self):
         area = self.side_a * self.side_b
