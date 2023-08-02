@@ -1,2 +1,2 @@
-# Hello world
-This is repository for OTUS course.
+# FiguresTests
+This is the second task from OTUS course.

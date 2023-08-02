@@ -1,0 +1,8 @@
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+*/venv/*
+*/__pycache__/*
+*/bin/*
+tests/lib64
+tests/pyvenv.cfg
