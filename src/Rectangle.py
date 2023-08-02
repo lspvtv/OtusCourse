@@ -1,8 +1,5 @@
 class Rectangle:
     def __init__(self, side_a, side_b):
-        if side_a == side_b:
-            import warnings
-            warnings.simplefilter("error")
         if type(side_a) == str or type(side_b) == str:
             raise ValueError("TypeError")
         if side_a <= 0 or side_b <= 0:
