@@ -29,15 +29,17 @@ def test_circle_creation_error(coord_x, coord_y, radius):
     with pytest.raises(ValueError):
         Circle(coord_x, coord_y, radius)
 
+
 @pytest.mark.parametrize('coord_x, coord_y, radius, area, length',
                          [
-                             (0, 0, 50 * 10 ** 33, 25*10**67, 31 * 10 ** 63)
+                             (0, 0, 50 * 10 ** 33, 25 * 10 ** 67, 31 * 10 ** 63)
 
                          ])
 def test_get_circle_area_error(coord_x, coord_y, radius, area, length):
     r = Circle(coord_x, coord_y, radius)
     with pytest.raises(ValueError):
         round(r.get_area(), 2) == area
+
 
 @pytest.mark.parametrize('coord_x, coord_y, radius, area, length',
                          [

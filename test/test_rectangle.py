@@ -2,7 +2,6 @@ import pytest
 from src.Rectangle import Rectangle
 
 
-
 @pytest.mark.parametrize('side_a, side_b, perimetr, area',
                          [
                              (4, 6, 20, 24),
