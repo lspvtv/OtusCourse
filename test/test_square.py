@@ -23,29 +23,29 @@ def test_correct_Square(side_a, perimetr, area):
                              (-0.3, -1.2, 0.09),
                              (-1 / 6, -2 / 3, 1 / 36),
                              (10 ** 65, 4 * 10 ** 65, 10 ** 130),
-                             ('5', '6', '22')
+                             ("5", 20, 15)
                          ])
 def test_Square_creation_error(side_a, perimetr, area):
     with pytest.raises(ValueError):
         Square(side_a)
 
 
-@pytest.mark.parametrize('side_a, perimetr, area',
+@pytest.mark.parametrize('side_a, area',
                          [
-                             (1 * 10 ** 32, 4 * 10 ** 32, 1 * 10 ** 64)
+                             (1 * 10 ** 32, 1 * 10 ** 64)
 
                          ])
-def test_get_square_area_error(side_a, perimetr, area):
+def test_get_square_area_error(side_a, area):
     r = Square(side_a)
     with pytest.raises(ValueError):
         r.get_area() == area
 
 
-@pytest.mark.parametrize('side_a, perimetr, area',
+@pytest.mark.parametrize('side_a, perimetr',
                          [
-                             (35 * 10 ** 63, 4 * 10 ** 64, 1225 * 10 ** 126)
+                             (3 * 10 ** 63, 9 * 10 ** 64)
                          ])
-def test_get_square_perimetr_error(side_a, perimetr, area):
+def test_get_square_perimetr_error(side_a, perimetr):
     r = Square(side_a)
     with pytest.raises(ValueError):
         r.get_perimetr() == perimetr

@@ -3,7 +3,7 @@ class Rectangle:
         if type(side_a) == str or type(side_b) == str:
             raise ValueError("TypeError")
         if side_a <= 0 or side_b <= 0:
-            raise ValueError("Can not create Rectangle")
+            raise ValueError("Can not create")
         if side_a > 10 ** 64 or side_b > 10 ** 64:
             raise ValueError("It is too large, stack overflow")
         self.side_a = side_a
