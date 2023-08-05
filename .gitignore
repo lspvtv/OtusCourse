@@ -7,3 +7,4 @@
 */lib/*
 tests/lib64
 tests/pyvenv.cfg
+requirements.txt
