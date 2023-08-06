@@ -15,28 +15,28 @@ def test_sum_area_rectangle_square():
 def test_sum_area_rectangle_triangle():
     value1 = Rectangle(2, 3)
     value2 = Triangle(5, 3, 2, 70, 20, 60)
-    assert value1.sum_area('value2') == 31
+    assert value1.sum_area('value2') == 36
 
 
 def test_sum_area_rectangle_circle():
     value1 = Rectangle(2, 3)
-    value2 = Circle(5, 3, 2)
-    assert value1.sum_area('value2') == 31
+    value2 = Circle(5, 3, 5)
+    assert value1.sum_area('value2') == 84.54
 
 
 def test_sum_area_square_triangle():
     value1 = Square(2)
     value2 = Triangle(5, 3, 2, 70, 20, 60)
-    assert value1.sum_area('value2') == 31
+    assert value1.sum_area('value2') == 34
 
 
 def test_sum_area_square_circle():
     value1 = Square(2)
     value2 = Circle(5, 3, 2)
-    assert value1.sum_area('value2') == 31
+    assert value1.sum_area('value2') == 82.54
 
 
 def test_sum_area_triangle_circle():
     value1 = Triangle(5, 3, 2, 70, 20, 60)
     value2 = Circle(5, 3, 2)
-    assert value1.sum_area('value2') == 31
+    assert value1.sum_area('value2') == 108.54
