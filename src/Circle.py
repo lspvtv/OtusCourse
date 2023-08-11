@@ -1,6 +1,7 @@
 import math
 from src.validation import validation
 
+
 class Circle:
     def __init__(self, coord_x, coord_y, radius):
         self.coord_x = coord_x

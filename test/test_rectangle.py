@@ -40,7 +40,7 @@ def test_rectangle_creation_error(side_a, side_b, perimetr, area):
 def test_get_rectangle_area_error(side_a, side_b, perimetr, area):
     r = Rectangle(side_a, side_b)
     with pytest.raises(ValueError):
-        r.get_area() == area
+        assert r.get_area() == area
 
 
 @pytest.mark.parametrize('side_a, side_b, perimetr, area',
@@ -50,4 +50,4 @@ def test_get_rectangle_area_error(side_a, side_b, perimetr, area):
 def test_get_rectangle_perimetr_error(side_a, side_b, perimetr, area):
     r = Rectangle(side_a, side_b)
     with pytest.raises(ValueError):
-        r.get_perimetr() == perimetr
+        assert r.get_perimetr() == perimetr
