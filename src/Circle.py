@@ -1,5 +1,5 @@
 import math
-from src.Validation import Validation
+from src.validation import validation
 
 class Circle:
     def __init__(self, coord_x, coord_y, radius):
@@ -7,16 +7,14 @@ class Circle:
         self.coord_y = coord_y
         self.radius = radius
         self.name = 'Circle'
-        return Validation(self.coord_x, self.coord_y, self.radius)
+        validation(self.coord_x, self.coord_y, self.radius)
 
     def get_area(self):
         area = math.pi * self.radius ** 2
-        if area >= 10 ** 64:
-            raise ValueError("It is too large, stack overflow")
+        validation(area)
         return area
 
     def get_length(self):
         length = round(2 * math.pi * self.radius, 2)
-        if length >= 10 ** 64:
-            raise ValueError("It is too large, stack overflow")
+        validation(length)
         return length
