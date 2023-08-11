@@ -32,13 +32,12 @@ def test_Square_creation_error(side_a, perimetr, area):
 
 @pytest.mark.parametrize('side_a, area',
                          [
-                             (1 * 10 ** 32, 1 * 10 ** 64)
-
+                             (10 ** 33, 10 ** 66)
                          ])
 def test_get_square_area_error(side_a, area):
     r = Square(side_a)
     with pytest.raises(ValueError):
-        r.get_area() == area
+        assert r.get_area() == area
 
 
 @pytest.mark.parametrize('side_a, perimetr',
@@ -48,4 +47,4 @@ def test_get_square_area_error(side_a, area):
 def test_get_square_perimetr_error(side_a, perimetr):
     r = Square(side_a)
     with pytest.raises(ValueError):
-        r.get_perimetr() == perimetr
+        assert r.get_perimetr() == perimetr
