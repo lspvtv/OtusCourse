@@ -1,10 +1,12 @@
 import math
 from math import sin
 from src.validation import validation
+from src.Figure import Figure
 
 
-class Triangle:
+class Triangle(Figure):
     def __init__(self, side_a, side_b, side_c, angle_a, angle_b, angle_c):  # side a opposite angle a
+        super().__init__()
         if angle_a + angle_b + angle_c != 180:
             raise ValueError("This triangle does not exist")
         if (angle_a >= 180 or angle_a <= 0) or (angle_b >= 180 or angle_b <= 0) or (angle_c >= 180 or angle_c <= 0):

@@ -1,8 +1,10 @@
 from src.validation import validation
+from src.Figure import Figure
 
 
-class Rectangle:
+class Rectangle(Figure):
     def __init__(self, side_a, side_b):
+        super().__init__()
         self.side_a = side_a
         self.side_b = side_b
         self.name = 'Rectangle'

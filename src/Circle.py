@@ -1,9 +1,11 @@
 import math
 from src.validation import validation
+from src.Figure import Figure
 
 
-class Circle:
+class Circle(Figure):
     def __init__(self, coord_x, coord_y, radius):
+        super().__init__()
         self.coord_x = coord_x
         self.coord_y = coord_y
         self.radius = radius
@@ -11,7 +13,7 @@ class Circle:
         validation(self.coord_x, self.coord_y, self.radius)
 
     def get_area(self):
-        area = math.pi * self.radius ** 2
+        area = round(math.pi * self.radius ** 2, 2)
         validation(area)
         return area
 
