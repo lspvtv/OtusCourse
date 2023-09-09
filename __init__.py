@@ -1,6 +1,7 @@
 import os
 
-FILES_DIR = os.path.dirname(__file__)
+CURRENT_DIR = os.path.dirname(__file__)
+FILES_DIR = os.path.join(CURRENT_DIR, 'files')
 
 
 def get_path(filename: str):

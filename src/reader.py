@@ -1,6 +1,6 @@
 import csv
 import json
-from src import get_path
+from __init__ import get_path
 
 # Считываем данные из CSV и JSON файлов
 books_file = get_path('books.csv')
@@ -36,5 +36,5 @@ for user in users:
     result.append(user)
 
 # Записываем результат в JSON файл
-with open('result.json', 'w') as f:
-    json.dump(result, f)
+with open(get_path('result.json'), 'w') as f:
+    json.dump(result, f, indent=4)
