@@ -5,3 +5,4 @@ requirements.txt
 README.md
 .gitignore
 /venv/
+ __pycache__/
