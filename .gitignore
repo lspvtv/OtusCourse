@@ -1,5 +1,8 @@
 # file: ~/.gitignore_global
 .DS_Store
 .idea
-src/*
-tests/*
+requirements.txt
+README.md
+.gitignore
+/venv/
+ __pycache__/
