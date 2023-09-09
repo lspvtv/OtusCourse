@@ -1,5 +1,8 @@
 # file: ~/.gitignore_global
+venv/*
 .DS_Store
 .idea
 src/*
-tests/*
+requirements.txt
+README.md
+.gitignore
